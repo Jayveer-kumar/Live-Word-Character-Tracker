@@ -1,7 +1,4 @@
-// 6. Reset Functionality
-//Add a button to reset the textarea and all counters.
-// 7. Real-Time Character Limit Warning
-// Instead of an alert, display a real-time warning message.
+
 let textarea=document.getElementById("textarea");
 let typed_char_score=document.getElementById("typed_char");
 let totalLength=document.getElementById("remain_char");
