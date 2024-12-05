@@ -37,5 +37,3 @@ textarea.addEventListener("input",function (){
         
     }
 });
-
-// Complete
