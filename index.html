@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Word & Character Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="main_conatiner">
+        <h2 id="title">Live Word & Character Tracker</h2>
+        <div class="container">
+            <div class="typed">
+                <span id="typed_char"></span>
+            </div>
+            <div class="remain">
+                <span id="remain_char"></span>
+            </div>
+            <textarea id="textarea" minlength="100"></textarea>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+     
+        <button id="reset">Clear All</button>
+    </section>   
+    
+    <script src="app.js"></script>
+</body>
+</html>

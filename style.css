@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color:white;
+}
+.main_conatiner{
+    height: 70vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#title{
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 2.4rem;
+    color:#07bbb8;
+}
+.container{
+    height: 70vh;
+    width: 90%;
+    border:0.1rem solid red;
+    position: relative;
+    border:0.01rem solid rgb(245, 237, 237);
+    margin-left: 1rem;
+}
+.typed{
+    position: absolute;
+    top:-2rem;
+    right: 4rem;
+    height: 2rem;
+    width: 4rem;
+    border:0.1rem solid yellow;
+    transition: before all 0.3s ease,hover all 0.3s ease;
+}
+.remain{
+    position: absolute;
+    top:-2rem;
+    right: 0;
+    height: 2rem;
+    width: 4rem;
+    border:0.1rem solid pink;
+    transition: before all 0.3s ease,hover all 0.3s ease;
+}
+.typed:hover::before{
+    content: "Typed Word";
+    position: absolute;
+    top:0;
+    right: 3.9rem;
+    height: 1.7rem;
+    width: 5rem;
+    color:red;
+    font-size: 0.7rem;
+    text-align: center;
+    opacity: 0;
+    animation: remain 1.2s ease forwards;
+}
+.remain:hover::before{
+    position: absolute;
+    content: "Remain Word";
+    top:0;
+    right: -4.9rem;
+    height: 1.7rem;
+    width: 5rem;
+    color:red;
+    font-size: 0.7rem;
+    text-align: center;
+    opacity: 0;
+    animation: remain 1.2s ease forwards;
+}
+
+
+@keyframes remain{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+.typed, .remain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#textarea{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color:rgb(255, 250, 250);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    padding:1rem 0.2rem;
+    resize: none;
+    border:none;
+    outline: none;
+    transition: all 0.2s ease;
+}
+#textarea:focus{
+    box-shadow: 0 0 2rem #07bbb8;
+}
+#reset{
+    position: relative;
+    left: 52rem;
+    top:2rem;
+    padding:0.4rem 0.6rem;
+    border-radius: 0.6rem;
+    border:0.1rem solid rgb(228, 5, 5);
+    background-color: red;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+#reset:hover{
+    box-shadow: 0 0 0.5rem red;
+    color:rgb(239, 238, 238);
+}
+#warning{
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+.progress-bar-container {
+    position: relative;
+    top:-1rem;
+    width: 100%;
+    height: 1rem;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
